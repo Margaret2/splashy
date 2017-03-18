@@ -1,0 +1,21 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/vue@2.2.4"></script>
+</head>
+  <body>
+    <div id="app">
+    <input type="url" placeholder="https://unsplash.com/?photo=ktQuuihh3_w" id="inputURL" v-model="inputURL"/>
+    <img id="demo" :src="outputURL[0]" />
+      <div>
+        <input type="number" id="imgWidth" v-model="imgWidth"/>
+        <input type="number" id="imgHeight" v-model="imgHeight" />
+      </div>
+      <a href="#" class="btn" @click="getPhotoURL">OK</a>
+      <div id="output">
+        {{outputURL[0]}}
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
